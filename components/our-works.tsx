@@ -41,36 +41,40 @@ const Works = () => {
   return (
     <section id="works" className="bg-gray-100 py-16 text-center">
       <div className="container mx-auto">
-        <h2 className="text-3xl font-bold text-gray-800 mb-4">Our Works</h2>
+        <h2 className="text-3xl font-bold text-gray-800 mb-4">Projects</h2>
         <p className="text-gray-600 mb-8">
           Check out some of our recent projects
         </p>
         <div className="grid grid-cols-2 lg:grid-cols-3 gap-8">
           {worksData.map((work, index) => (
-            <Link href={work.url} key={index} target="_blank">
-              <div
-                key={index}
-                className="bg-white rounded-lg shadow-lg overflow-hidden flex flex-col items-center"
-                style={{ cursor: "pointer" }}
-              >
-                <div className="h-48 w-full">
-                  <img
-                    src={work.imageUrl}
-                    alt={work.title}
-                    className="h-full w-full object-cover"
-                  />
+            <Link href={work.url} key={index}>
+              <a target="_blank">
+                <div
+                  key={index}
+                  className="bg-white rounded-lg shadow-lg overflow-hidden flex flex-col items-center"
+                  style={{ cursor: "pointer" }}
+                >
+                  <div className="h-48 w-full">
+                    <img
+                      src={work.imageUrl}
+                      alt={work.title}
+                      className="h-full w-full object-cover"
+                    />
+                  </div>
+                  <div className="flex-1 w-full bg-gray-200 flex justify-center items-center p-4">
+                    <p className="text-gray-800 font-semibold">{work.title}</p>
+                  </div>
                 </div>
-                <div className="flex-1 w-full bg-gray-200 flex justify-center items-center p-4">
-                  <p className="text-gray-800 font-semibold">{work.title}</p>
-                </div>
-              </div>
+              </a>
             </Link>
           ))}
         </div>
-        <Link href="https://turkeyrealestatexhibition.com" target="_blank">
-          <button className="mt-8 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full">
-            See More Work
-          </button>
+        <Link href="https://turkeyrealestatexhibition.com">
+          <a target="_blank">
+            <button className="mt-8 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full">
+              Vist Exhibition
+            </button>
+          </a>
         </Link>
       </div>
     </section>

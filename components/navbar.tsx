@@ -11,7 +11,7 @@ const Navbar = () => {
     <nav className="bg-gradient-to-r from-blue-500 to-red-600 text-white py-4 fixed w-full top-0 z-50">
       <div className="container mx-auto flex justify-between items-center text-lg font-bold">
         <Link href="/">Your Logo</Link>
-        <div className="space-x-6">
+        <div className="space-x-8">
           <Link href="#home" className="hover:text-gray-300 hover:underline">
             Home
           </Link>

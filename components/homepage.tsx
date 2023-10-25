@@ -3,9 +3,15 @@
 import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
+import SignupForm from "./signupForm";
 
 const HomePage = () => {
   const [timeLeft, setTimeLeft] = useState(calculateTimeLeft());
+  const [isSignupFormVisible, setSignupFormVisible] = useState(false);
+
+  const handleSignupButtonClick = () => {
+    setSignupFormVisible(true);
+  };
 
   useEffect(() => {
     const countdownInterval = setInterval(() => {
@@ -141,9 +147,11 @@ const HomePage = () => {
           animate={{ scale: 1 }}
           transition={{ delay: 2.2 }}
           className="bg-teal-500 hover:bg-teal-700 text-white font-bold py-2 px-4 rounded-full mt-10"
+          onClick={handleSignupButtonClick}
         >
-          Explore Now
+          Sign Up
         </motion.button>
+        {isSignupFormVisible && <SignupForm />}
       </div>
     </section>
   );

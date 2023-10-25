@@ -8,7 +8,7 @@ const testimonialsData = [
     id: 1,
     name: "Rich",
     surname: "Peyman",
-    title: "Boss",
+    title: "Iran Sultan",
     quote:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero.",
     avatar: "/img/our-clients/client-1.jpg",
