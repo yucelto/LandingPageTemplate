@@ -13,6 +13,10 @@ const HomePage = () => {
     setSignupFormVisible(true);
   };
 
+  const handleSignupFormClose = () => {
+    setSignupFormVisible(false);
+  };
+
   useEffect(() => {
     const countdownInterval = setInterval(() => {
       setTimeLeft(calculateTimeLeft());
@@ -55,7 +59,10 @@ const HomePage = () => {
   }
 
   return (
-    <section id="home" className="hero relative h-screen py-64">
+    <section
+      id="home"
+      className="hero relative h-screen py-6 sm:py-16 md:py-64 mb-8 sm:mb-0 flex flex-col justify-center items-center"
+    >
       <div className="absolute top-0 left-0 w-full h-full">
         <Image
           src="/img/istanbul.jpg"
@@ -146,12 +153,17 @@ const HomePage = () => {
           initial={{ scale: 0 }}
           animate={{ scale: 1 }}
           transition={{ delay: 2.2 }}
-          className="bg-teal-500 hover:bg-teal-700 text-white font-bold py-2 px-4 rounded-full mt-10"
+          className="bg-teal-500 hover:bg-teal-700 text-white font-bold py-2 px-4 rounded-full animate-bounce cursor-pointer"
           onClick={handleSignupButtonClick}
         >
           Sign Up
         </motion.button>
-        {isSignupFormVisible && <SignupForm />}
+        {isSignupFormVisible && (
+          <SignupForm
+            isVisible={isSignupFormVisible}
+            onClose={handleSignupFormClose}
+          />
+        )}
       </div>
     </section>
   );

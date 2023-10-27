@@ -6,6 +6,7 @@ import OurServices from "../components/our-services";
 import Works from "../components/our-works";
 import Partners from "../components/partners";
 import Testimonials from "../components/testimonials";
+import ContactUs from "../components/contact-us";
 
 const Home: NextPage = () => {
   return (
@@ -17,6 +18,7 @@ const Home: NextPage = () => {
       <Works />
       <OurServices />
       <Testimonials />
+      <ContactUs />
     </main>
   );
 };

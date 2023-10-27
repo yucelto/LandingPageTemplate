@@ -51,7 +51,7 @@ const OurServices = () => {
       <div className="container mx-auto">
         <h2 className="text-3xl font-bold text-gray-800 mb-4">Services</h2>
         <p className="text-gray-600 mb-8">Explore our top-notch services</p>
-        <div className="grid grid-cols-2 lg:grid-cols-3 gap-12">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-12">
           {servicesData.map((service, index) => (
             <div
               key={index}
